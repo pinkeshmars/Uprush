@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users collection - private to authenticated user
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Habits collection - private to the user who owns the habit
+    match /habits/{habitId} {
+      allow read, write, delete: if request.auth != null && request.auth.uid == resource.data.owner_id;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.owner_id;
+    }
+    
+    // Habit completions collection - private to the user who owns the completion
+    match /habit_completions/{completionId} {
+      allow read, write, delete: if request.auth != null && request.auth.uid == resource.data.owner_id;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.owner_id;
+    }
+  }
+}

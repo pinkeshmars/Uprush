@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062119518637",
+    "project_id": "zxzihgr40xy51ft3zzq346fxysed2e",
+    "storage_bucket": "zxzihgr40xy51ft3zzq346fxysed2e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062119518637:android:8984d4c3f03b5bfca4f124",
+        "android_client_info": {
+          "package_name": "com.awesomeorg.uprush"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkpw3OUiAbhf8u4MaHnr6qk6SzqSJmEiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
